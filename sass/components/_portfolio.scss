@@ -1,0 +1,38 @@
+.portfolio{
+padding-top: 130px;
+padding-bottom: 130px;
+
+&-list {
+display: flex;
+justify-content: space-between;
+margin-top: 44px;
+}
+
+&-text {
+    position: relative;
+    font-weight: 600;
+font-size: 11px;
+line-height: 1.36;
+
+letter-spacing: 0.1em;
+text-transform: uppercase;
+
+padding-left: 80px;
+
+color: #303030;
+
+&::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 60px;
+    background-color: black;
+
+    transform: rotate(90deg);
+
+    top: -23px;
+    left: 30px;
+}
+}
+}

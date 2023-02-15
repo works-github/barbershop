@@ -1,0 +1,122 @@
+.pros {
+    display: flex;
+    justify-content: space-around;
+
+    padding: 130px 55px;
+
+&-item {
+    width: 170px;
+    height: 133px;
+    background-color:#F7F7F7;
+    padding: 20px;
+    text-align: center;
+    margin: 15px;
+
+&.pad {
+    position: relative;
+    top: 35px;
+}
+
+   
+
+.numbers {
+    font-weight: 700;
+font-size: 42px;
+line-height: 1.35;
+letter-spacing: 0.05em;
+
+margin-bottom: 6px;
+
+color: #303030;
+
+.plus {
+    font-weight: 600;
+font-size: 16px;
+line-height: 1.37;
+
+vertical-align: top;
+
+color: $color-hover;
+}
+
+}
+
+.paragraph {
+    font-weight: 600;
+font-size: 11px;
+line-height: 1.36;
+text-align: center;
+color: #303030;
+
+}
+}
+
+    
+&-list {
+    display: flex;
+    flex-wrap: wrap;
+    
+    margin: 0 -15px;
+    max-width: 400px;
+}
+
+
+&-two {
+    max-width: 500px;
+}
+}
+
+.title-two {
+    position: relative;
+    font-weight: 600;
+font-size: 11px;
+line-height: 1.36;
+
+letter-spacing: 0.1em;
+text-transform: uppercase;
+
+color: #303030;
+
+margin-bottom: 20px;
+padding-left: 85px;
+
+&::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 60px;
+    background-color: black;
+
+    transform: rotate(90deg);
+
+    top: -23px;
+    left: 30px;
+}
+}
+
+.subtitle {
+    font-family: 'Raleway';
+font-style: normal;
+font-weight: 700;
+font-size: 42px;
+line-height: 1.16;
+letter-spacing: 0.05em;
+
+color: #303030;
+
+margin-bottom: 20px;
+}
+
+.call {
+    font-weight: 400;
+font-size: 18px;
+line-height: 1.66;
+
+letter-spacing: 0.02em;
+
+color: $color-heading;
+
+
+
+}

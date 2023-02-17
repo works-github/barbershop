@@ -94,22 +94,49 @@ body {
 }
 
 .social {
-  position: absolute;
+  position: relative;
   width: 155px;
   height: 680px;
+  padding-left: 55px;
 }
-.social .logo {
+.social-logotip {
+  position: absolute;
+  top: 32px;
+  width: 69px;
+  height: 56px;
+}
+.social-logotip .logo {
   display: block;
-  margin: 32px 0px 282px 55px;
 }
-.social-list {
+.social-one {
+  position: absolute;
+  top: 370px;
+  right: 58px;
   -webkit-writing-mode: tb-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: tb-rl;
-  margin-top: 40px;
-  margin-left: 85px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+.social-two {
+  position: absolute;
+  top: 468px;
+  right: 58px;
+  -webkit-writing-mode: tb-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.social-two::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 60px;
+  background-color: #303030;
+  top: -100px;
+  left: 10px;
 }
 .social-link {
   font-weight: 600;
@@ -122,6 +149,11 @@ body {
   color: #FF6C00;
 }
 
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .header-nav {
   background-image: url(/img/hero_3@2x.jpg);
   background-repeat: no-repeat;
@@ -130,24 +162,31 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1125px;
+  width: 1125px;
   height: 680px;
   position: relative;
   right: 0;
-  padding-left: 55px;
-  padding-right: 55px;
-  margin-left: auto;
+  padding: 40px 55px 40px 40px;
 }
 
 .site-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 52px;
+  height: 48px;
+  margin-right: 322px;
 }
 .site-nav .list {
-  margin-left: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: white;
+}
+.site-nav .list:not(:first-child) {
+  margin-left: 40px;
 }
 .site-nav .link {
   font-weight: 600;
@@ -166,9 +205,15 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin-left: auto;
+  height: 48px;
 }
 .mobile-list {
-  padding-top: 52px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .mobile-list:not(:last-child) {
   margin-right: 40px;
@@ -184,9 +229,6 @@ body {
 .mobile-link:hover,
 .mobile-link :focus {
   color: #FF6C00;
-}
-.mobile-item {
-  padding-top: 40px;
 }
 .mobile .button {
   color: #ffffff;

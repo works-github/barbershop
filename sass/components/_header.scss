@@ -1,14 +1,18 @@
 .social {
   position: relative;
 
-  width: 155px;
-  height: 680px;
+  background-color: #fff;
 
-  padding-left: 55px;
+  padding-left: 155px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 
   &-logotip {
     position: absolute;
     top: 32px;
+    right: 35px;
 
     width: 69px;
     height: 56px;
@@ -67,22 +71,42 @@
   }
 }
 
-.header {
-  display: flex;
-
-  &-nav {
-    background-image: url(/img/hero_3@2x.jpg);
+.page-header {
+  background-image: url(/img/hero_3@2x.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
     display: flex;
-    width: 1125px;
+  margin: auto;
+
+    max-width: 1280px;
     height: 680px;
 
+    @media screen and (max-width: 767px) {
+      max-width: 768px;
+      height: 580px;
+    }
+}
+
+.header {
+  display: flex;
+  position: relative;
+
+  &-nav {
+    display: flex;
+    
+width: 100%;
+
     position: relative;
-    right: 0;
+
     padding: 40px 55px 40px 40px;
+
+    @media screen and (max-width: 767px) {
+     padding: 40px 31px 40px 31px; 
+    }
+
+   
   }
 }
 
@@ -91,7 +115,9 @@
 
   height: 48px;
 
-  margin-right: 322px;
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
 
   .list {
     display: flex;
@@ -123,6 +149,10 @@
   margin-left: auto;
 
   height: 48px;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
 
   &-list {
     display: flex;
@@ -156,8 +186,13 @@
 .header-text {
   position: absolute;
 
-  left: 100px;
-  top: 272px;
+  left: 260px;
+  top: 279px;
+
+  @media screen and (max-width: 767px) {
+    left: 31px;
+    top: 215px;
+  }
 
   .paragraph {
     font-weight: 600;
@@ -196,6 +231,11 @@
     letter-spacing: 0.05em;
 
     color: #ffffff;
+
+    @media screen and (max-width: 767px) {
+font-size: 48px;
+line-height: 1.16;
+    }
   }
 
   .offer {
@@ -206,5 +246,10 @@
     letter-spacing: 0.02em;
 
     color: $color-auxiliary;
+
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+line-height: 1.62;
+    }
   }
 }

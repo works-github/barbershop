@@ -95,13 +95,18 @@ body {
 
 .social {
   position: relative;
-  width: 155px;
-  height: 680px;
-  padding-left: 55px;
+  background-color: #fff;
+  padding-left: 155px;
+}
+@media screen and (max-width: 767px) {
+  .social {
+    display: none;
+  }
 }
 .social-logotip {
   position: absolute;
   top: 32px;
+  right: 35px;
   width: 69px;
   height: 56px;
 }
@@ -149,12 +154,7 @@ body {
   color: #FF6C00;
 }
 
-.header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.header-nav {
+.page-header {
   background-image: url(/img/hero_3@2x.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -162,11 +162,35 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 1125px;
+  margin: auto;
+  max-width: 1280px;
   height: 680px;
+}
+@media screen and (max-width: 767px) {
+  .page-header {
+    max-width: 768px;
+    height: 580px;
+  }
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
-  right: 0;
+}
+.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: relative;
   padding: 40px 55px 40px 40px;
+}
+@media screen and (max-width: 767px) {
+  .header-nav {
+    padding: 40px 31px 40px 31px;
+  }
 }
 
 .site-nav {
@@ -174,7 +198,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   height: 48px;
-  margin-right: 322px;
+}
+@media screen and (max-width: 767px) {
+  .site-nav {
+    display: block;
+  }
 }
 .site-nav .list {
   display: -webkit-box;
@@ -207,6 +235,11 @@ body {
   margin-left: auto;
   height: 48px;
 }
+@media screen and (max-width: 767px) {
+  .mobile {
+    display: block;
+  }
+}
 .mobile-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -236,8 +269,14 @@ body {
 
 .header-text {
   position: absolute;
-  left: 100px;
-  top: 272px;
+  left: 260px;
+  top: 279px;
+}
+@media screen and (max-width: 767px) {
+  .header-text {
+    left: 31px;
+    top: 215px;
+  }
 }
 .header-text .paragraph {
   font-weight: 600;
@@ -269,12 +308,24 @@ body {
   letter-spacing: 0.05em;
   color: #ffffff;
 }
+@media screen and (max-width: 767px) {
+  .header-text .title {
+    font-size: 48px;
+    line-height: 1.16;
+  }
+}
 .header-text .offer {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.66;
   letter-spacing: 0.02em;
   color: #9DA4BD;
+}
+@media screen and (max-width: 767px) {
+  .header-text .offer {
+    font-size: 16px;
+    line-height: 1.62;
+  }
 }
 
 .overfloy {
@@ -979,4 +1030,76 @@ body {
           transform: rotate(90deg);
   top: -23px;
   left: 30px;
+}
+
+.menu-button {
+  position: absolute;
+  top: 48px;
+  right: 31px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: rgba(25, 28, 38, 0.2);
+  fill: #ffffff;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  margin-left: auto;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+.menu-button .icon-cross {
+  display: none;
+}
+.menu-button:hover, .menu-button:focus {
+  fill: #FF6C00;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-container {
+    display: none;
+    position: absolute;
+    width: 337px;
+    height: 800px;
+    top: 0px;
+    right: 0px;
+    background-color: white;
+    padding: 48px 31px 48px 40px;
+    text-align: center;
+    font-size: 20px;
+    z-index: 1;
+    -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+  }
+  .menu-container.is-open {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+  }
 }/*# sourceMappingURL=main.css.map */
